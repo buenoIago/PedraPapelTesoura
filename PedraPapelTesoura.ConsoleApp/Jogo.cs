@@ -6,14 +6,13 @@ static class Jogo
     private const int papel = 2;
     private const int tesoura = 3;
     public static int chuteJogador;
-
-    public static int scoreJogador = 0;
-    public static int scoreComputador = 0;
-
+    private static int scoreJogador = 0;
+    private static int scoreComputador = 0;
+    
     public static void ConfigurarJogo(int chuteJogador1)
     {
         chuteJogador = chuteJogador1;
-    }
+    }  
 
     public static void JogoEmAndamento()
     {
