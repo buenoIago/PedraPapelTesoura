@@ -1,5 +1,7 @@
 #  PEDRA, PAPEL E TESOURA 
 
+![](.docs/WindowsTerminal_0EijJm6DW3.gif)
+
 ## INTRODUÇÃO
 
 Este projeto consiste em um jogo digital de Pedra, Papel e Tesoura desenvolvido em C# para execução via Console. O sistema permite que um jogador humano dispute contra o computador, utilizando lógica de programação estruturada para determinar o resultado das rodadas.

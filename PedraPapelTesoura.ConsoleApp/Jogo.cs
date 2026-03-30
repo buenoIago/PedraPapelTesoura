@@ -7,6 +7,9 @@ static class Jogo
     private const int tesoura = 3;
     public static int chuteJogador;
 
+    public static int scoreJogador = 0;
+    public static int scoreComputador = 0;
+
     public static void ConfigurarJogo(int chuteJogador1)
     {
         chuteJogador = chuteJogador1;
@@ -50,6 +53,8 @@ static class Jogo
                     Console.WriteLine("Jogada inválida");
                     break;
             }
+ 
+            System.Console.WriteLine("------------------------------");
 
             if (chuteJogador == chuteComputador)
             {
@@ -66,6 +71,7 @@ static class Jogo
                 System.Console.WriteLine("Vitória do Jogador!");
                 Console.ResetColor();
                 System.Console.WriteLine($"Jogador escolheu: {JogadaJogador} e o computador: {jogadaComputador}.");
+                scoreJogador++;
             }
 
             else
@@ -74,7 +80,11 @@ static class Jogo
                 System.Console.WriteLine("Vitória do Computador!");
                 Console.ResetColor();
                 System.Console.WriteLine($"Jogador escolheu: {JogadaJogador} e o computador: {jogadaComputador}.");
+                scoreComputador++;
             }
+
+            System.Console.WriteLine($"\nVitórias do jogador: {scoreJogador}");
+            System.Console.WriteLine($"Vitórias do Computador: {scoreComputador}");
 
             System.Console.WriteLine("------------------------------");
             System.Console.WriteLine("Pressione ENTER para continuar");
