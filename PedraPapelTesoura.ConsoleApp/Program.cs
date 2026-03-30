@@ -16,7 +16,7 @@ class Program
             System.Console.WriteLine("Pedra, Papel Tesoura!");
             System.Console.WriteLine("------------------------------");
 
-            System.Console.WriteLine("Escolha sua jogada: \nDigite 1 para Pedra, 2 para Papel ou 3 para Tesoura");
+            System.Console.WriteLine("Escolha sua jogada: \nDigite 1 para Pedra, 2 para Papel ou 3 para Tesoura:");
             int chuteJogador = Convert.ToInt32(Console.ReadLine());
 
             string JogadaJogador = "";
@@ -63,51 +63,27 @@ class Program
                 Console.ResetColor();
                 System.Console.WriteLine($"Jogador escolheu: {JogadaJogador} e o computador: {jogadaComputador}.");
             }
-            else if (chuteJogador == pedra && chuteComputador == papel)
+            else if (chuteJogador == pedra && chuteComputador == tesoura
+            || chuteJogador == tesoura && chuteComputador == papel
+            || chuteJogador == papel && chuteComputador == pedra)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                System.Console.WriteLine("Vitória do Jogador!");
+                Console.ResetColor();
+                System.Console.WriteLine($"Jogador escolheu: {JogadaJogador} e o computador: {jogadaComputador}.");
+            }
+
+            else
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 System.Console.WriteLine("Vitória do Computador!");
                 Console.ResetColor();
-                System.Console.WriteLine("Jogador escolheu: PEDRA e o computador: PAPEL.");
+                System.Console.WriteLine($"Jogador escolheu: {JogadaJogador} e o computador: {jogadaComputador}.");
             }
-            else if (chuteJogador == papel && chuteComputador == pedra)
-            {
-                Console.ForegroundColor = ConsoleColor.Green;
-                System.Console.WriteLine("Vitória do Jogador!");
-                Console.ResetColor();
-                System.Console.WriteLine("Jogador escolheu: PAPEL e o computador: PEDRA.");
-            }
-            else if (chuteJogador == papel && chuteComputador == tesoura)
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                System.Console.WriteLine("Vitória do Computador!");
-                Console.ResetColor();
-                System.Console.WriteLine("Jogador escolheu: PAPEL e o computador: TESOURA.");
-            }
-            else if (chuteJogador == tesoura && chuteComputador == papel)
-            {
-                Console.ForegroundColor = ConsoleColor.Green;
-                System.Console.WriteLine("Vitória do Jogador!");
-                Console.ResetColor();
-                System.Console.WriteLine("Jogador escolheu: TESOURA e o computador: PAPEL.");
-            }
-            else if (chuteJogador == pedra && chuteComputador == tesoura)
-            {
-                Console.ForegroundColor = ConsoleColor.Green;
-                System.Console.WriteLine("Vitória do Jogador!");
-                Console.ResetColor(); 
-                System.Console.WriteLine("Jogador escolheu: PEDRA e o computador: TESOURA.");
-            }
-            else if (chuteJogador == tesoura && chuteComputador == pedra)
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                System.Console.WriteLine($"Vitória do Computador!");
-                Console.ResetColor(); 
-                Console.WriteLine("Jogador escolheu: TESOURA e o computador: PEDRA.");
-            }
+    
             Console.ReadLine();
 
-           if (!JogadorDesejaContinuar())
+            if (!JogadorDesejaContinuar())
             {
                 System.Console.WriteLine("Encerrando o programa...");
                 Thread.Sleep(1000);
