@@ -1,22 +1,27 @@
 ﻿
+using System.Collections.Concurrent;
 using System.Security.Cryptography;
 
 class Program
 {
     static void Main(string[] args)
     {
+        const int pedra = 1;
+        const int papel = 2;
+        const int tesoura = 3;
+        int contador = 0;
         while (true)
         {
             Console.Clear();
-            int pedra = 1;
-            int papel = 2;
-            int tesoura = 3;
+            contador++;
 
             System.Console.WriteLine("------------------------------");
             System.Console.WriteLine("Pedra, Papel Tesoura!");
             System.Console.WriteLine("------------------------------");
+            System.Console.WriteLine($"Iniciando a rodada {contador}");
+            System.Console.WriteLine("------------------------------\n");
 
-            System.Console.WriteLine("Escolha sua jogada: \nDigite 1 para Pedra, 2 para Papel ou 3 para Tesoura:");
+            System.Console.WriteLine("Escolha sua jogada: (1, 2 ou 3) \n1: Pedra, 2: Papel 3: Tesoura:");
             int chuteJogador = Convert.ToInt32(Console.ReadLine());
 
             string JogadaJogador = "";
@@ -27,7 +32,7 @@ class Program
                     JogadaJogador = "pedra";
                     break;                   
                 case 2:
-                    JogadaJogador = "Papel";
+                    JogadaJogador = "papel";
                     break;
                 case 3:
                     JogadaJogador = "Tesoura";
@@ -46,7 +51,7 @@ class Program
                     jogadaComputador = "pedra";
                     break;                   
                 case 2:
-                    jogadaComputador = "Papel";
+                    jogadaComputador = "papel";
                     break;
                 case 3:
                     jogadaComputador = "Tesoura";
@@ -80,7 +85,10 @@ class Program
                 Console.ResetColor();
                 System.Console.WriteLine($"Jogador escolheu: {JogadaJogador} e o computador: {jogadaComputador}.");
             }
-    
+
+            System.Console.WriteLine("\n------------------------------");
+            System.Console.WriteLine("Pressione ENTER para continuar");
+            System.Console.WriteLine("------------------------------");
             Console.ReadLine();
 
             if (!JogadorDesejaContinuar())
@@ -100,8 +108,7 @@ class Program
             return false;
         
         else
-            return true;
-            
+            return true;            
        }
     }
 }
