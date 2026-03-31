@@ -33,6 +33,7 @@ class Program
         }
 
         static bool JogadorDesejaContinuar()
+
         {
 
         Console.WriteLine("Deseja continuar? (s/N)");
@@ -43,6 +44,6 @@ class Program
         
         else
             return true;            
-       }
+        }
     }
 }

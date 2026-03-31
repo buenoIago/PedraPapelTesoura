@@ -31,7 +31,7 @@ static class Jogo
                     break;
                 default:
                     Console.WriteLine("Jogada inválida");
-                    break;
+                    return;
             }
 
             int chuteComputador = RandomNumberGenerator.GetInt32(1,4);
@@ -47,9 +47,6 @@ static class Jogo
                     break;
                 case 3:
                     jogadaComputador = "Tesoura";
-                    break;
-                default:
-                    Console.WriteLine("Jogada inválida");
                     break;
             }
  
