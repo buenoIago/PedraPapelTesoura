@@ -12,13 +12,21 @@ class Program
             contador++;
 
             System.Console.WriteLine("------------------------------");
-            System.Console.WriteLine("Pedra, Papel Tesoura!");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            System.Console.Write("Pedra ");
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            System.Console.Write("Papel");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            System.Console.WriteLine(" Tesoura!");
+            Console.ResetColor();
             System.Console.WriteLine("------------------------------");
             System.Console.WriteLine($"Iniciando a rodada {contador}");
             System.Console.WriteLine("------------------------------");
-
+            
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
             System.Console.WriteLine("1: Pedra 2: Papel 3: Tesoura\nEscolha sua jogada: (1, 2 ou 3)");
             Jogo.chuteJogador = Convert.ToInt32(Console.ReadLine());
+            Console.ResetColor();
 
             Jogo.ConfigurarJogo(Jogo.chuteJogador);
 

@@ -78,9 +78,11 @@ static class Jogo
                 System.Console.WriteLine($"Jogador escolheu: {JogadaJogador} e o computador: {jogadaComputador}.");
                 scoreComputador++;
             }
-
-            System.Console.WriteLine($"\nVitórias do jogador: {scoreJogador}");
+            System.Console.WriteLine("------------------------------");
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            System.Console.WriteLine($"Vitórias do jogador: {scoreJogador}");
             System.Console.WriteLine($"Vitórias do Computador: {scoreComputador}");
+            Console.ResetColor();
 
             System.Console.WriteLine("------------------------------");
             System.Console.WriteLine("Pressione ENTER para continuar");
