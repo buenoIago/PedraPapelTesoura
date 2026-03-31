@@ -1,6 +1,6 @@
 #  PEDRA, PAPEL E TESOURA 
 
-![](.docs/WindowsTerminal_0EijJm6DW3.gif)
+![](.docs/WindowsTerminal_9lHuESLigE.gif)
 
 ## INTRODUÇÃO
 
